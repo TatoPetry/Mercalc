@@ -1,0 +1,38 @@
+.card-container{
+  width: 100%;
+  border-bottom: 2px solid darkolivegreen;
+  font-weight: bold;
+  box-sizing: border-box;
+}
+
+.btn-card-container{
+  border-top: 2px solid darkgray;
+  display: flex;
+  justify-content: space-around;
+}
+
+.btn-card-container a{
+  width: 50%;
+  text-align: center;
+}
+
+.card-title {
+  font-size: 1.5em;
+  color: darkolivegreen;
+  text-shadow: 2px 2px 3px lightgreen;
+}
+
+.card-btn {
+  background: rgba(51, 153, 11, 0.2);
+
+}
+.card-btn:active {
+  background: darkolivegreen;
+
+}
+
+.divisor-card {
+  border-right: 2px solid darkolivegreen;
+}
+
+

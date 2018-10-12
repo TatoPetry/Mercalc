@@ -1,0 +1,17 @@
+.login-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100vh;
+}
+.bg-img-fundo {
+  background: url("../../../assets/img/mercado-fundo.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  max-width: 100vw;
+  height: 100vh;
+
+}
+
+

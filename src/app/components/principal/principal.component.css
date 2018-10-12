@@ -1,0 +1,17 @@
+.principal-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background: darkkhaki;
+}
+
+.cards-container {
+  width: 90vw;
+  height: 80vh;
+  border-radius: 10px;
+  align-self: center;
+  background: white;
+  overflow: auto;
+}
