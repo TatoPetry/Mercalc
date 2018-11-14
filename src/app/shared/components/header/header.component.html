@@ -1,3 +1,20 @@
 <header class="bg-principal p-2 fixed-top">
+  <div class="logo-container" *ngIf="this.fbAuth.getAuth() | async as user">
+    <a class="header-img" (click)="abrirModal()">
+      <div class="logo-img" *ngIf="user.photoURL; else noPhoto">
+        <img class="logo-img" [src]="user.photoURL" alt="">
+      </div>
+      <ng-template class="logo-icon-container" #noPhoto>
+        <i class="logo-icon fa fa-user fa-2x"></i>
+      </ng-template>
+    </a>
+  </div>
     <h3 class="h3 text-center ">Login</h3>
 </header>
+
+<app-modal-confirma
+  [modalOpen]="modalOpen"
+  [TextoModal]="textoModal"
+  [modalTipo]="modalTipo"
+  (emitFechaModal)="recebendoModal($event)">
+</app-modal-confirma>

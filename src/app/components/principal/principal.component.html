@@ -1,13 +1,18 @@
 <div class="principal-container">
 
     <div class="d-flex justify-content-center">
-      <button class="button p-2 mt-57 tp-wd50 tp-h5">Adicionar Lista</button>
+      <button class="button p-2 mt-57 tp-wd50 tp-h5" (click)="abrirModaForm()">Adicionar Lista</button>
     </div>
     <div class="cards-container">
-      <div *ngFor="let card of cards">
-        <mc-principal-card [titulo]="card.titulo"></mc-principal-card>
+      <div *ngFor="let lista of listas | async">
+        <app-principal-card [titulo]="lista.titulo" [id]="lista.id"></app-principal-card>
       </div>
     </div>
 </div>
 
-<app-modal-confirma></app-modal-confirma>
+<div *ngIf="modalOpen">
+  <app-modal-lista-form
+    [modalOpen]="modalOpen"
+    (emitFechaModal)="recebendoModalEvent()"
+  ></app-modal-lista-form>
+</div>

@@ -1,9 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
+
 import { LoginComponent } from '../components/login/login.component';
 import { ListaComponent } from '../components/lista/lista.component';
 import { PrincipalComponent } from '../components/principal/principal.component';
+import { AuthGuard } from '../core/guard/auth.guard';
 
 const routes: Routes = [
   {
@@ -11,11 +13,11 @@ const routes: Routes = [
     component: LoginComponent
   },
   {
-    path: 'lista',
+    path: 'lista/:id',
     component: ListaComponent
   },
   {
-    path: 'principal',
+    path: 'principal/:id',
     component: PrincipalComponent
   },
   {

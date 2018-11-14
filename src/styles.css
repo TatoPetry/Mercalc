@@ -121,3 +121,54 @@ input {
   background: rgb(45, 54, 24, 0.900);
 }
 
+/* style modal */
+.modal-overlay{
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal-container{
+  position: relative;
+  width: 80%;
+  max-width: 500px;
+  background: white;
+  border-radius: 10px;
+  box-sizing: border-box;
+  border: 2px solid darkolivegreen;
+}
+.modal-title{
+  font-size: 1.3em;
+  color: darkolivegreen;
+
+}
+.modal-btn-container{
+  border-top: 2px solid darkolivegreen;
+  display: flex;
+  justify-content: space-around;
+}
+.modal-btn{
+  width: 50%;
+  text-decoration: none;
+  text-align: center;
+  background: rgba(51, 153, 11, 0.2);
+}
+.modal-btn:active{
+  background: darkolivegreen;
+}
+.divisor-btn{
+  border-right: 2px solid darkolivegreen;
+}
+.modal-close{
+  position: absolute;
+  top: 0px;
+  right: 5px;
+}
+.modal-close > i{
+  color: darkolivegreen;
+}

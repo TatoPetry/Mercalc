@@ -1,0 +1,30 @@
+<div class="modal-overlay">
+    <div class="modal-container">
+
+      <a  class="modal-close">
+          <i class="fa fa-times tp-h4"></i>
+      </a>
+
+      <form class="tp-form-group pt-2">
+        <div class="groups-container">
+          <div class="tp-form-item p-3">
+            <input formControlName="titulo" type="text" class="p-2" placeholder="Nome do Item">
+          </div>
+          <div class="tp-form-item p-3">
+            <input formControlName="quantidade" type="number" class="p-2" placeholder="Quantidade">
+          </div>
+          <div class="tp-form-item p-3">
+              <input formControlName="valor" type="number" class="p-2" placeholder="Valor do Item">
+            </div>
+          <div class="modal-btn-container">
+        </div>
+          <button
+            type="button"
+            class="modal-btn divisor-btn p-2"
+            >Submit</button>
+          <button type="button" (click)="modalFecha()"class="modal-btn btn p-2">Cancel</button>
+        </div>
+      </form>
+
+    </div>
+  </div>

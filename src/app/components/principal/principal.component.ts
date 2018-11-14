@@ -1,4 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
+import { Observable } from 'rxjs';
+
+import { Lista } from 'src/app/core/interfaces/lista';
+import { ListasService } from 'src/app/core/services/listas.service';
+import { ActivatedRoute } from '@angular/router';
+import { map } from 'rxjs/operators';
+
 
 @Component({
   selector: 'app-principal',
@@ -7,18 +14,33 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PrincipalComponent implements OnInit {
 
-  cards: any[] = [
-     {titulo: 'Compras da Semana'},
-     {titulo: 'Feira do Mês'},
-     {titulo: 'teste3'},
-     {titulo: 'teste4'},
-     {titulo: 'teste5'},
-     {titulo: 'teste6'}
-    ];
+  id;
+  // Controle Modal Form
+  modalOpen = false;
 
-  constructor() { }
+
+  listas: Observable<Lista[]>;
+
+
+  constructor(
+    private listasService: ListasService,
+    private route: ActivatedRoute
+  ) {
+    console.log(this.route.snapshot.params['id']);
+
+  }
 
   ngOnInit() {
+    this.listas = this.listasService.getListas();
+
+  }
+
+  // Controle Modal
+  abrirModaForm() {
+    this.modalOpen = true;
+  }
+  recebendoModalEvent(event) {
+    this.modalOpen = event;
   }
 
 }

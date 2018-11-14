@@ -1,0 +1,29 @@
+  <table class="table-container">
+    <thead class="thead-container">
+      <th class="thead-item border-r" width="50%">Item</th>
+      <th class="thead-item border-r" width="10%">Qtd</th>
+      <th class="thead-item border-r" width="20%">Preço</th>
+      <th class="thead-item" width="20%">Edit</th>
+    </thead>
+    <tbody *ngFor="let item of items | async" class="tbody-container">
+      <td (dblclick)="deleteConfirma()" class="tbody-item border-r" width="50%">{{ item.titulo}}</td>
+      <td class="tbody-item border-r" width="10%">{{ item.quantidade }}</td>
+      <td class="tbody-item border-r" width="20%">R${{ item.valor }}</td>
+      <td class="tbody-item text-center" width="20%">
+        <a class="btn-tabela">
+          <i class="fa fa-plus-circle fa-2x"></i>
+        </a>
+      </td>
+      <div *ngIf="modalOpen">
+        <app-modal-confirma
+        [modalOpen]="modalOpen"
+        [modalTipo]="modalTipo"
+        [id]="item.id"
+        [TextoModal]="TextoModal"
+        (emitFechaModal)="recebeEmit()"></app-modal-confirma>
+      </div>
+    </tbody>
+  </table>
+
+
+

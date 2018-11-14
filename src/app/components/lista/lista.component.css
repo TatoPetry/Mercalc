@@ -1,0 +1,35 @@
+.principal-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background: darkkhaki;
+}
+
+.lista-container {
+  width: 90vw;
+  height: 70vh;
+  border-radius: 10px;
+  align-self: center;
+  background: white;
+  overflow: auto;
+}
+
+.total-container{
+  width: 50%;
+  align-self: center;
+  color: darkolivegreen;
+  font-weight: bold;
+  display:flex;
+
+}
+
+.input-total{
+  background: white;
+  border-radius: 10px;
+  text-align: center;
+  color: darkolivegreen;
+  font-weight: bold;
+
+}

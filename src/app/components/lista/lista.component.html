@@ -1,3 +1,17 @@
-<p>
-  lista works!
-</p>
+<div class="principal-container">
+
+  <div class="d-flex justify-content-center">
+    <button (click)="abrirModalForm()" class="button p-2 mt-57 tp-wd50 tp-h5">Adicionar Item</button>
+  </div>
+  <div class="lista-container">
+    <app-tabela-lista [items]="items"></app-tabela-lista>
+  </div>
+  <div class="total-container">
+    <label for="">Total:</label>
+    <input readonly class="input-total" value="R$ {{ total }}" type="text" name="" id="">
+  </div>
+</div>
+
+<div *ngIf="modalOpen">
+  <app-form-items [modalOpen]="modalOpen" (emitFechaModal)="recebendoModalEvent()"></app-form-items>
+</div>
