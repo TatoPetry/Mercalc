@@ -5,7 +5,11 @@
     </div>
     <div class="cards-container">
       <div *ngFor="let lista of listas | async">
-        <app-principal-card [titulo]="lista.titulo" [id]="lista.id"></app-principal-card>
+        <app-principal-card 
+        [titulo]="lista.titulo" 
+        [id]="lista.id"
+        (emitDelete)="executaDelete($event)"        
+        ></app-principal-card>
       </div>
     </div>
 </div>

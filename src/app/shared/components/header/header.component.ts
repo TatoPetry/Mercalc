@@ -28,8 +28,14 @@ export class HeaderComponent implements OnInit {
   abrirModal() {
     this.modalOpen = true;
   }
+
+  //Modal de Confirmação
   recebendoModal(event) {
+    this.modalOpen = event;    
+  }
+  executaLogout(event) {
     this.modalOpen = event;
+    this.fbAuth.logout();
   }
 
 

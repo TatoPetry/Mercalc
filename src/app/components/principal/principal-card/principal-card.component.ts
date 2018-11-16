@@ -1,5 +1,7 @@
-import { Component, Input, NgZone } from '@angular/core';
+import { Component, Input, NgZone, Output, EventEmitter } from '@angular/core';
 import { Router } from '@angular/router';
+
+
 
 
 
@@ -13,6 +15,7 @@ export class PrincipalCardComponent {
 
   @Input() titulo: string;
   @Input() id: string;
+  @Output() emitDelete: EventEmitter<string> = new EventEmitter();
 
   // Parametros do modal
   modalOpen = false;
@@ -21,7 +24,7 @@ export class PrincipalCardComponent {
 
   constructor(
     private router: Router,
-    private ngZone: NgZone
+    private ngZone: NgZone    
   ) {
 
   }
@@ -35,9 +38,14 @@ export class PrincipalCardComponent {
   abrirModal() {
     this.modalOpen = true;
   }
-
+  //Modal confirmação delete items 
   recebendoModal(event) {
     this.modalOpen = event;
+  
+  }
+  confirmaDelete(event) {
+    this.modalOpen = event;
+    this.emitDelete.emit(this.id);
   }
 
 

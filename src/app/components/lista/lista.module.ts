@@ -6,6 +6,8 @@ import { FormItemsComponent } from './form-items/form-items.component';
 import { FormValoresComponent } from './tabela-lista/form-valores/form-valores.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ModalConfirmaModule } from 'src/app/shared/components/modal-confirma/modal-confirma.module';
+import { ItemsService } from 'src/app/core/services/items.service';
+
 
 
 @NgModule({
@@ -21,6 +23,10 @@ import { ModalConfirmaModule } from 'src/app/shared/components/modal-confirma/mo
     FormsModule,
     ReactiveFormsModule,
     ModalConfirmaModule
+  ],
+  providers: [
+    ItemsService    
   ]
+
 })
 export class ListaModule {}

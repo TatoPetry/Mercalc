@@ -10,7 +10,7 @@ import { ItemsService } from 'src/app/core/services/items.service';
 })
 export class TabelaListaComponent implements OnInit {
 
-  @Input() items: Observable<Items[]>;
+  @Input() items: Items[] = [];
 
 
   // Variáveis modal Confirma
@@ -18,7 +18,7 @@ export class TabelaListaComponent implements OnInit {
   modalOpen = false;
   TextoModal = 'Tem certeza que deseja deletar esse item?';
 
-  constructor(private itemsService: ItemsService) { }
+  constructor() { }
 
   ngOnInit() {
     console.log(this.items);

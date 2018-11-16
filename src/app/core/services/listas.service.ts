@@ -38,7 +38,7 @@ export class ListasService implements OnInit {
   }
 
   private takeCollection() {
-    this.listaCol = this._firestore.collection(this.URL).doc(this.URL_USER).collection('Listas');
+    this.listaCol = this._firestore.collection(this.URL).doc(this.URL_USER).collection('listas');
   }
 
   private takeObservable() {

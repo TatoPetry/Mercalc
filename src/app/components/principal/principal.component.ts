@@ -26,7 +26,7 @@ export class PrincipalComponent implements OnInit {
     private listasService: ListasService,
     private route: ActivatedRoute
   ) {
-    console.log(this.route.snapshot.params['id']);
+   
 
   }
 
@@ -35,12 +35,16 @@ export class PrincipalComponent implements OnInit {
 
   }
 
-  // Controle Modal
+  // Controle Modal Form
   abrirModaForm() {
     this.modalOpen = true;
   }
   recebendoModalEvent(event) {
     this.modalOpen = event;
+  }
+  // Recebendo execução delete item
+  executaDelete(event) {
+    this.listasService.deleteLista(event);
   }
 
 }

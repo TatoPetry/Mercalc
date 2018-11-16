@@ -7,6 +7,7 @@ import { ListaComponent } from '../components/lista/lista.component';
 import { PrincipalComponent } from '../components/principal/principal.component';
 import { AuthGuard } from '../core/guard/auth.guard';
 
+
 const routes: Routes = [
   {
     path: 'login',
@@ -14,7 +15,7 @@ const routes: Routes = [
   },
   {
     path: 'lista/:id',
-    component: ListaComponent
+    component: ListaComponent    
   },
   {
     path: 'principal/:id',
